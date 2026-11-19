@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fanclub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+  <header class="hero">
+    <img src="{{ url_for('static', filename='fan.jpg') }}" alt="Fanclub photo" class="avatar" />
+    <h1>Fanclub Page</h1>
+    <p>Welcome to the fanclub!</p>
+    <a href="#join" class="btn">Join Now</a>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>About</h2>
+      <p>Write your bio, favorite moments, or links here.</p>
+    </section>
+
+    <section id="join" class="card">
+      <h2>Join the Fanclub</h2>
+
+      {% if joined_name %}
+        <p class="alert">Welcome, <strong>{{ joined_name }}</strong>! You joined.</p>
+      {% endif %}
+
+      <form method="POST" class="form">
+        <input type="text" name="name" placeholder="Your name" required />
+        <textarea name="favorite_moment" rows="3" placeholder="Favorite moment or shoutout"></textarea>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+
+      {% if members %}
+        <h3>Members ({{ members|length }})</h3>
+        <ul>
+          {% for m in members %}
+            <li><strong>{{ m.name }}</strong>{% if m.favorite_moment %} — {{ m.favorite_moment }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>
