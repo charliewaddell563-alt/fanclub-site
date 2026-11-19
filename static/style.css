@@ -1,14 +1,14 @@
 body {
   font-family: Arial, sans-serif;
-  background: #111827;
-  color: #f9fafb;
+  background: #000000;
+  color: #ffffff;
   margin: 0;
   text-align: center;
 }
 
 .hero {
   padding: 40px 20px;
-  background: #1f2937;
+  background: #000000;
 }
 
 .avatar {
@@ -16,7 +16,7 @@ body {
   height: 140px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #38bdf8;
+  border: 3px solid #ffffff;
 }
 
 .container {
@@ -26,7 +26,8 @@ body {
 }
 
 .card {
-  background: #1f2937;
+  background: #111111;
+  border: 1px solid #262626;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -42,15 +43,15 @@ body {
 input, textarea {
   padding: 10px;
   border-radius: 6px;
-  border: 1px solid #4b5563;
-  background: #111827;
-  color: #fff;
+  border: 1px solid #444444;
+  background: #000000;
+  color: #ffffff;
 }
 
 .btn {
   display: inline-block;
-  background: #38bdf8;
-  color: #111827;
+  background: #ffffff;
+  color: #000000;
   font-weight: bold;
   padding: 10px 16px;
   border-radius: 6px;
@@ -60,7 +61,8 @@ input, textarea {
 }
 
 .alert {
-  background: #065f46;
+  background: #1a1a1a;
+  border: 1px solid #ffffff;
   padding: 10px;
   border-radius: 6px;
 }
